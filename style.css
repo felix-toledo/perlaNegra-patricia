@@ -37,7 +37,29 @@ header ul{
     margin-right: 10px;
     color:#EBEBEB;
     text-align: center;
+} header a {
+    color:#EBEBEB;
+    text-decoration: none;
+} .li-productos{
+    display: flex;
+    flex-flow: column;
+} .category-list{
+    display: none;
+    flex-flow: column;
+    background-color: #119DA4;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -5px;
+    min-width: 100px;
+
+} .category-item:hover{
+    cursor:pointer;
+    background-color: #1169a441;
+} .li-productos:hover > .category-list{
+    display: flex;
 }
+
+
 
 
 h1{

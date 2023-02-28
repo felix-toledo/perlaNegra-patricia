@@ -1,20 +1,37 @@
 let product = [];
 const botonAros = document.getElementById("aros");
 const botonAnillos = document.getElementById("anillos");
+const botonCollares = document.getElementById("collares");
+const botonPulseras = document.getElementById("pulseras");
+const botonProductos = document.getElementById("productos");
 
-botonAros.addEventListener("click", (event) => {
+
+botonAros.addEventListener("click", () => {
   categoryFilter("aros");
 });
-
-botonAnillos.addEventListener("click", (event) => {
+botonAnillos.addEventListener("click", () => {
   categoryFilter("anillos");
 });
+botonCollares.addEventListener("click", () => {
+  categoryFilter("collares");
+});
+botonPulseras.addEventListener("click", () => {
+  categoryFilter("pulseras");
+});
+botonProductos.addEventListener("click", (event) => {
+  const productContainer = document.querySelector('.product-container');
+  productContainer.innerHTML = '';
+  show();
+});
+
+
 
 function categoryFilter(category) {
   // TODO: implement category filtering logic
   console.log(category);
   const productContainer = document.querySelector('.product-container');
   productContainer.innerHTML = '';
+  let cantidad = 0;
   // You can add your filtering logic here to show only the products belonging to the selected category.
   for (let i = 0; i < product.length; i++) {
     const id = product[i].id;
@@ -26,6 +43,7 @@ function categoryFilter(category) {
     const productCategory = product[i].categoria;
     
     if (productCategory == category){
+      cantidad = cantidad +1;
       const productContainer = document.querySelector('.product-container');
       const productDiv = document.createElement('div');
       productDiv.classList.add('product');
@@ -58,11 +76,16 @@ function categoryFilter(category) {
     } 
     // Create HTML elements for the product
   }
-
+  if (cantidad == 0){
+    const productDiv = document.createElement('div');
+    productDiv.textContent = `Por el momento no tenemos ${category} para vender!`;
+    productContainer.appendChild(productDiv);
+  }
 }
 
 function show(){
   console.log(product);
+  const cantidad = product.length;
   for (let i = 0; i < product.length; i++) {
     const id = product[i].id;
     const name = product[i].producto;
@@ -75,7 +98,6 @@ function show(){
     const productContainer = document.querySelector('.product-container');
     const productDiv = document.createElement('div');
     productDiv.classList.add('product');
-
     const image = document.createElement('img');
     image.src = imageUrl;
     productDiv.appendChild(image);
@@ -102,6 +124,7 @@ function show(){
 
     productContainer.appendChild(productDiv);
   }
+
 }
 
 // Parsed Format
