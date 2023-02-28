@@ -15,13 +15,13 @@
     <header>
         <div class="bottom-nav">
             <ul class="nav-container">
-                <li class="navitem"><a href="index.html">INICIO</a></li>
+                <li class="navitem"><a href="#home" id="inicio">INICIO</a></li>
                 <li class="navitem li-productos"><a href="#productos" id="productos">PRODUCTOS</a>
                     <ul class="category-list">
-                        <li><a class="aros category-item" id="aros">AROS</a></li>
-                        <li><a class="anillos category-item" id="anillos">ANILLOS</a></li>
-                        <li><a class="collares category-item" id="collares">COLLARES</a></li>
-                        <li><a class="pulseras category-item" id="pulseras">PULSERAS</a></li>
+                        <li><a class="aros category-item" href="#productos-aros" id="aros">AROS</a></li>
+                        <li><a class="anillos category-item" href="#productos-anillos" id="anillos">ANILLOS</a></li>
+                        <li><a class="collares category-item" href="#productos-collares" id="collares">COLLARES</a></li>
+                        <li><a class="pulseras category-item" href="#productos-pulseras" id="pulseras">PULSERAS</a></li>
                     </ul>
                 </li>
                 <li class="navitem">SOBRE MÍ</li>
@@ -29,8 +29,17 @@
             </ul>
         </div>
     </header>
-    <script src="app.js"></script>
+    <div class="main-article" id="main-article">
+        <div class="article-container">
+            <h2>Me llamo Patricia!</h2>
+            <p class="text-area">Descubrí la belleza en la sencillez de nuestras joyas únicas y accesibles. Pedí las tuyas y te las llevamos directo a tu casa. Podes chequear lo que te ofrecemos en la página!</p>
+        </div>
+    </div>
     <div class="product-container"></div>
+
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="/pages/homePage.js"></script>
 </body>
 
 </html>
