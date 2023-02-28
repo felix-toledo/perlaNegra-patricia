@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #0B0A07;
+    font-family: Montserrat;
+}
+
+.top-header{
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    height: auto;
+    background-color: #EBEBEB;
+    text-align: center;
+}
+
+.top-header img{ /* LOGO PERLA NEGRA */
+    width: 80px;
+}
+
+header{
+    width: 100vw;
+    height: auto;
+    background-color: #119DA4;
+    display: flex;
+    justify-content: center;
+}
+header ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 5px;
+} header li {
+    margin-left: 10px;
+    margin-right: 10px;
+    color:#EBEBEB;
+    text-align: center;
+}
+
+
+h1{
+    font-family: Playfair Display ;
+    text-align: center;
+}
+
+
+.product-container{
+    display: flex;
+}
+
+.product{
+    height: 300px;
+    width: 15vw;
+    background-color: #877666;
+}
+
+.product img{
+    width: 70%;
+    height: auto;
+}

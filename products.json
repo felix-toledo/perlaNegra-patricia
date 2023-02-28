@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "producto": "arito de oro",
+        "descripcion": "el mejor aro de oro que vas a ver en tu vida",
+        "cantidad": 3,
+        "precio": "$500",
+        "imagen": "https://th.bing.com/th/id/R.62b83ae83ce68c672cb8f2e56b755f35?rik=LvxhdOJRMKyILQ&pid=ImgRaw&r=0",
+        "categoria": "aros"
+    },
+    {
+        "id": "2",
+        "producto": "anillo de oro",
+        "descripcion": "este es un anillo de oro muy lindo",
+        "cantidad": 2,
+        "precio": "$1850",
+        "imagen": "https://http2.mlstatic.com/anillo-compromiso-oro-amarillo-10kt-video-disponible-holanda-D_NQ_NP_950474-MLM31214767359_062019-F.jpg",
+        "categoria": "anillos"
+    },
+    {
+        "id": "3",
+        "producto": "collar de plata",
+        "descripcion": "este es un collar de plata bastante lindo",
+        "cantidad": "1",
+        "precio": "$300",
+        "imagen": "https://cdn-img-0.wanelo.com/p/c39/dd8/6b8/afbfb2a65f71ec35b123608/x354-q80.jpg",
+        "categoria": "collares"
+    }
+  ]
