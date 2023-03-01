@@ -4,6 +4,7 @@ const botonAnillos = document.getElementById("anillos");
 const botonCollares = document.getElementById("collares");
 const botonPulseras = document.getElementById("pulseras");
 const botonProductos = document.getElementById("productos");
+export const productContainer = document.querySelector('.product-container');
 
 export function show(){
     console.log(product);
@@ -17,7 +18,6 @@ export function show(){
       const imageUrl = product[i].imagen;
   
       // Create HTML elements for the product
-      const productContainer = document.querySelector('.product-container');
       const productDiv = document.createElement('div');
       productDiv.classList.add('product');
       const image = document.createElement('img');

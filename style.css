@@ -17,7 +17,7 @@
     text-align: center;
     overflow: hidden;
 } .fa-user{
-    color: #877666;
+    color: #0B0A07;
     position: absolute;
     left: 25px;
     top: 25px;
@@ -32,24 +32,88 @@
  .user-container{
     display: flex;
     flex-direction: column;
-    height: 40px;
     margin-left: -8px;
     background-color: #877666;
     position: absolute;
     border-radius: 3px;
     padding: 3px;
-    top: 20px;
+    top: 10px;
     left: 60px;
-    width: 70px;
     transition: all 1s;
 } .user-container a, .user-container p{
     color: white;
     font-size: small;
+} .user-container-nbg{
+    background-color: #00000000;
 }
 
 .top-header img{ /* LOGO PERLA NEGRA */
     width: 80px;
 }
+
+.cta-hidden{
+    display: none;
+}
+
+.cta{
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 13px 7px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #119DA4;
+    width: 45px;
+    height: 42px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #0B0A07;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #0B0A07;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: #119DA4;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+
+
 
 header{
     max-width: 100vw;
@@ -136,3 +200,32 @@ h1{
     width: 70%;
     height: auto;
 }
+
+.login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } .login-hidden{
+    display: none;
+  }
+  
+  .login-content {
+    width: 80vw;
+    height: 70vh;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  
+  
+  
+  

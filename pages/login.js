@@ -1,16 +1,18 @@
+import {button} from "../components/button.js";
+import {productContainer} from "./products.js";
 const userButton = document.querySelector("#user-button");
-const userDataContainer = document.querySelector("#user-container")
+const userDataContainer = document.querySelector("#user-container");
 let activated = false;
-let botonLogIn;
-let nombre = "feli";
+let nombre = "";
 
 userButton.addEventListener("click", () => {
-    changeClass(userDataContainer,"user-container-hidden", "user-container");
     userInfo();
     });
 
 export function login(){
-    
+    const body = document.querySelector("#body");
+    const loginContainer = document.querySelector("#login-container");
+    loginContainer.classList.replace("login-hidden", "login");
 }
 
 function userInfo(){
@@ -18,10 +20,17 @@ function userInfo(){
     nombreDeUsuario.textContent = nombre;
 
     if (nombre == ""){
-        botonLogIn = document.createElement("button");
-        botonLogIn.textContent = "Ingresar";
-        userDataContainer.appendChild(botonLogIn);
+        changeClass(userDataContainer,"user-container-hidden", "user-container");
+        userDataContainer.classList.add("user-container-nbg");
+        userDataContainer.innerHTML = '';
+        let boton = button(userDataContainer, "registrarse!");
+        boton.addEventListener("click", () => {
+            login();
+            productContainer.innerHTML= '';
+            });
     } else {
+        changeClass(userDataContainer,"user-container-hidden", "user-container");
+        userDataContainer.innerHTML = '';
         userDataContainer.appendChild(nombreDeUsuario);
     }
 }
