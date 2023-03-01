@@ -25,25 +25,26 @@
     transition: all 1s;
 } .fa-user:hover{
     transform: scale(1.6);
-} .user-container{
+    cursor: pointer;
+}.user-container-hidden{
     display: none;
+}
+ .user-container{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    margin-left: -8px;
     background-color: #877666;
     position: absolute;
     border-radius: 3px;
     padding: 3px;
-    top: -5px;
-    left: 20px;
+    top: 20px;
+    left: 60px;
     width: 70px;
     transition: all 1s;
 } .user-container a, .user-container p{
     color: white;
-    font-size: x-small;
-} .fa-user:hover > .user-container{
-    display: flex;
-    height: 30px;
-    flex-flow: column wrap;
-    align-content: space-around;
-    margin-left: -8px;
+    font-size: small;
 }
 
 .top-header img{ /* LOGO PERLA NEGRA */
