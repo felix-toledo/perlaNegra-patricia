@@ -6,6 +6,32 @@ const userDataContainer = document.querySelector("#user-container");
 let activated = false;
 let nombre = "";
 
+const registrarseWindow = document.getElementById('registrarse-window');
+const registerOption = document.querySelector("#register-option");
+
+const closeButtons = document.querySelectorAll('.window-button.close');
+const botonRegistrar = document.querySelector('#button-register');
+
+
+botonRegistrar.addEventListener('click', function() {
+    registracion();
+  });
+
+closeButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    const window = this.closest('.window');
+    window.classList.remove('show');
+  });
+});
+
+function registracion (event){
+    const nombreInput = document.querySelector("#nombre");
+    console.log(nombreInput.value);
+    nombre = nombreInput.value;
+    event.preventDefault();
+}
+
+
 userButton.addEventListener("click", () => {
     userInfo();
     });
@@ -22,6 +48,10 @@ export function login(){
         loginContainer.classList.replace("login", "login-hidden");
         productContainer.innerHTML = '';
         show();
+        });
+
+        registerOption.addEventListener("click", () => {
+            registrarseWindow.classList.add('show');
         });
 }
 
