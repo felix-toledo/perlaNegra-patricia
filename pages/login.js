@@ -3,6 +3,7 @@ import {productContainer} from "./products.js";
 import { show } from './products.js';
 const userButton = document.querySelector("#user-button");
 const userDataContainer = document.querySelector("#user-container");
+const loginContainer = document.querySelector("#login-container");
 let activated = false;
 let nombre = "";
 
@@ -13,8 +14,8 @@ const closeButtons = document.querySelectorAll('.window-button.close');
 const botonRegistrar = document.querySelector('#button-register');
 
 
-botonRegistrar.addEventListener('click', function() {
-    registracion();
+botonRegistrar.addEventListener('click', function(event) {
+    registracion(event);
   });
 
 closeButtons.forEach(function(button) {
@@ -29,6 +30,11 @@ function registracion (event){
     console.log(nombreInput.value);
     nombre = nombreInput.value;
     event.preventDefault();
+    registrarseWindow.classList.remove('show');
+        loginContainer.classList.replace("login", "login-hidden");
+        productContainer.innerHTML = '';
+        show();
+        userInfo()
 }
 
 
@@ -37,7 +43,6 @@ userButton.addEventListener("click", () => {
     });
 
 export function login(){
-    const loginContainer = document.querySelector("#login-container");
     setTimeout(function() {
         loginContainer.classList.replace("login-hidden", "login");
         loginContainer.classList.add('login-enter');
@@ -72,6 +77,15 @@ function userInfo(){
         changeClass(userDataContainer,"user-container-hidden", "user-container");
         userDataContainer.innerHTML = '';
         userDataContainer.appendChild(nombreDeUsuario);
+        nombreDeUsuario.classList.add("user-container-with-user")
+        let logOut = document.createElement("button");
+        nombreDeUsuario.appendChild(logOut);
+        logOut.classList.add("log-out-button")
+        logOut.textContent = "LOG OUT";
+        logOut.addEventListener("click", () => {
+            nombre = "";
+            userInfo();
+            });
     }
 }
 
