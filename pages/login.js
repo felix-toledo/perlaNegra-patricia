@@ -1,5 +1,6 @@
 import {button} from "../components/button.js";
 import {productContainer} from "./products.js";
+import { show } from './products.js';
 const userButton = document.querySelector("#user-button");
 const userDataContainer = document.querySelector("#user-container");
 let activated = false;
@@ -10,9 +11,18 @@ userButton.addEventListener("click", () => {
     });
 
 export function login(){
-    const body = document.querySelector("#body");
     const loginContainer = document.querySelector("#login-container");
-    loginContainer.classList.replace("login-hidden", "login");
+    setTimeout(function() {
+        loginContainer.classList.replace("login-hidden", "login");
+        loginContainer.classList.add('login-enter');
+      }, 100);
+
+    const close = document.querySelector (".close");
+    close.addEventListener("click", () => {
+        loginContainer.classList.replace("login", "login-hidden");
+        productContainer.innerHTML = '';
+        show();
+        });
 }
 
 function userInfo(){
