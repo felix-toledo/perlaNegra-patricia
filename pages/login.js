@@ -1,15 +1,15 @@
 import {button} from "../components/button.js";
 import {productContainer} from "./products.js";
 import { show } from './products.js';
-const userButton = document.querySelector("#user-button");
-const userDataContainer = document.querySelector("#user-container");
-const loginContainer = document.querySelector("#login-container");
+
 let activated = false;
 let nombre = "";
 
+const userButton = document.querySelector("#user-button");
+const userDataContainer = document.querySelector("#user-container");
+const loginContainer = document.querySelector("#login-container");
 const registrarseWindow = document.getElementById('registrarse-window');
 const registerOption = document.querySelector("#register-option");
-
 const closeButtons = document.querySelectorAll('.window-button.close');
 const botonRegistrar = document.querySelector('#button-register');
 
@@ -25,6 +25,26 @@ closeButtons.forEach(function(button) {
   });
 });
 
+userButton.addEventListener("click", () => {
+    userInfo();
+    });
+
+    export function login(){
+        setTimeout(function() {
+            loginContainer.classList.replace("login-hidden", "login");
+            loginContainer.classList.add('login-enter');
+          }, 100);
+        const close = document.querySelector (".close");
+        close.addEventListener("click", () => {
+            loginContainer.classList.replace("login", "login-hidden");
+            productContainer.innerHTML = '';
+            show();
+            });
+            registerOption.addEventListener("click", () => {
+                registrarseWindow.classList.add('show');
+            });
+    }
+
 function registracion (event){
     const nombreInput = document.querySelector("#nombre");
     console.log(nombreInput.value);
@@ -35,29 +55,6 @@ function registracion (event){
         productContainer.innerHTML = '';
         show();
         userInfo()
-}
-
-
-userButton.addEventListener("click", () => {
-    userInfo();
-    });
-
-export function login(){
-    setTimeout(function() {
-        loginContainer.classList.replace("login-hidden", "login");
-        loginContainer.classList.add('login-enter');
-      }, 100);
-
-    const close = document.querySelector (".close");
-    close.addEventListener("click", () => {
-        loginContainer.classList.replace("login", "login-hidden");
-        productContainer.innerHTML = '';
-        show();
-        });
-
-        registerOption.addEventListener("click", () => {
-            registrarseWindow.classList.add('show');
-        });
 }
 
 function userInfo(){

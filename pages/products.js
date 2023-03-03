@@ -45,11 +45,9 @@ export function show(){
       productDiv.appendChild(priceElement);
       productContainer.appendChild(productDiv);
     }
-  
   }
 
 export function productsListen(){
-
 botonAros.addEventListener("click", () => {
     categoryFilter("aros");
   });
@@ -67,9 +65,6 @@ botonAros.addEventListener("click", () => {
     productContainer.innerHTML = '';
     show();
   });
-
-  
-
 
   function categoryFilter(category) {
     // TODO: implement category filtering logic
@@ -122,7 +117,6 @@ botonAros.addEventListener("click", () => {
     
         productContainer.appendChild(productDiv);
       } 
-      // Create HTML elements for the product
     }
     if (cantidad == 0){
       const productDiv = document.createElement('div');
@@ -142,7 +136,6 @@ botonAros.addEventListener("click", () => {
     .catch((error) => {
       console.error(error);
     });
-
 }
 
 
