@@ -8,6 +8,13 @@
     font-family: Montserrat;
 }
 
+body{
+    background-color: #03191E;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+
 .top-header{
     position: sticky;
     z-index: 2;
@@ -126,12 +133,10 @@
    }
 
 
-
 header{
     position: absolute;
     z-index: 1;
-    min-width: 100vw;
-    max-width: 100vw;
+    width: 100vw;
     height: auto;
     background-color: #119DA4;
     display: flex;
@@ -141,7 +146,8 @@ header{
 header ul{
     list-style: none;
     display: inline-flex;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 } header li {
     margin-left: 10px;
     margin-right: 10px;
@@ -152,17 +158,13 @@ header ul{
     text-decoration: none;
 } .li-productos{
     display: flex;
-    flex-flow: column;
+    flex-flow: column;  
 } .category-list{
     display: none;
     flex-flow: column;
     background-color: #119DA4;
-    position: absolute;
-    z-index: 2;
+    position: fixed;
     margin-top: 20px;
-    margin-left: -5px;
-    min-width: 100px;
-
 } .category-item:hover{
     cursor:pointer;
     background-color: #1169a441;
@@ -178,6 +180,7 @@ header ul{
     background-size: cover;
     background-position:bottom;
     background-attachment: fixed;
+    margin-top: 25px;
 }
 .main-article h2{
     font-family: Playfair Display;

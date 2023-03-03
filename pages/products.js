@@ -7,7 +7,7 @@ const botonProductos = document.getElementById("productos");
 export const productContainer = document.querySelector('.product-container');
 
 export function show(){
-    console.log(product);
+    productContainer.innerHTML = "";
     const cantidad = product.length;
     for (let i = 0; i < product.length; i++) {
       const id = product[i].id;
