@@ -164,7 +164,7 @@ header ul{
     flex-flow: column;
     background-color: #119DA4;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 15px;
 } .category-item:hover{
     cursor:pointer;
     background-color: #1169a441;
@@ -206,22 +206,24 @@ h1{
 
 
 .product-container{
+
     display: flex;
     height: 100vh;
     background-color: #e5e5e5;
-    padding: 10px;
+    padding: 30px;
+} .no-hay{
+    margin-left: -15px;
 }
 
 .product{
-    height: 320px;
-    width: 15vw;
+    height: 400px;
+    max-width: 20vw;
     background-color: #03191E;
-    margin: 20px;
+    margin: 20px 10px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     text-align: center;
     border: #0B0A07 solid 1px;
     border-radius: 3px;

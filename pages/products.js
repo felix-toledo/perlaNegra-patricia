@@ -119,9 +119,10 @@ botonAros.addEventListener("click", () => {
       } 
     }
     if (cantidad == 0){
-      const productDiv = document.createElement('div');
-      productDiv.textContent =`Por el momento no tenemos ${category} para vender! `;
-      productContainer.appendChild(productDiv);
+      const noHay = document.createElement('div');
+      noHay.textContent =`Por el momento no tenemos ${category} para vender! `;
+      noHay.classList.add("no-hay")
+      productContainer.appendChild(noHay);
     }
   }
   
