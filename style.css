@@ -311,12 +311,12 @@ h1{
     border: solid 2px #03191E;
     overflow: hidden;
   } .info-cont img{
-    max-width: 100%;
+    width: 30vw;
   } .hey{
     font-family: Playfair Display;
     text-align: center;
     border-top: solid 3px #03191E;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     transition: all 0.5s;
     margin-top: -5px;
   } .hey:hover{
