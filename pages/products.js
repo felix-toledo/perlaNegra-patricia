@@ -5,6 +5,7 @@ const botonCollares = document.getElementById("collares");
 const botonPulseras = document.getElementById("pulseras");
 const botonProductos = document.getElementById("productos");
 export const productContainer = document.querySelector('.product-container');
+productsListen();
 
 export function show(){
     productContainer.innerHTML = "";
@@ -44,29 +45,12 @@ export function show(){
       priceElement.textContent = `Precio: ${price}`;
       productDiv.appendChild(priceElement);
       productContainer.appendChild(productDiv);
+
+      
     }
   }
 
-export function productsListen(){
-botonAros.addEventListener("click", () => {
-    categoryFilter("aros");
-  });
-  botonAnillos.addEventListener("click", () => {
-    categoryFilter("anillos");
-  });
-  botonCollares.addEventListener("click", () => {
-    categoryFilter("collares");
-  });
-  botonPulseras.addEventListener("click", () => {
-    categoryFilter("pulseras");
-  });
-  botonProductos.addEventListener("click", (event) => {
-    const productContainer = document.querySelector('.product-container');
-    productContainer.innerHTML = '';
-    show();
-  });
-
-  function categoryFilter(category) {
+  export function categoryFilter(category) {
     // TODO: implement category filtering logic
     const mainArticle = document.querySelector("#main-article");
     mainArticle.classList.replace("main-article", "main-articlee");
@@ -125,6 +109,28 @@ botonAros.addEventListener("click", () => {
       productContainer.appendChild(noHay);
     }
   }
+
+
+export function productsListen(){
+botonAros.addEventListener("click", () => {
+    categoryFilter("aros");
+  });
+  botonAnillos.addEventListener("click", () => {
+    categoryFilter("anillos");
+  });
+  botonCollares.addEventListener("click", () => {
+    categoryFilter("collares");
+  });
+  botonPulseras.addEventListener("click", () => {
+    categoryFilter("pulseras");
+  });
+  botonProductos.addEventListener("click", (event) => {
+    const productContainer = document.querySelector('.product-container');
+    productContainer.innerHTML = '';
+    show();
+  });
+
+  
   
   // Parsed Format
   fetch("./products.json")
