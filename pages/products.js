@@ -5,6 +5,7 @@ const botonCollares = document.getElementById("collares");
 const botonPulseras = document.getElementById("pulseras");
 const botonProductos = document.getElementById("productos");
 import {button} from "../components/button.js";
+import {carrito} from "../components/carrito.js";
 export const productContainer = document.querySelector('.product-container');
 productsListen();
 
@@ -38,7 +39,7 @@ export function show(){
       addToCartButton[i].classList.add(`button-${i}`);
 
       addToCartButton[i].addEventListener("click", () => {
-        alert(`${id}, ${name} agregado`);
+        carrito(id, name);
         });
 
       const stockElement = document.createElement('p');
@@ -100,7 +101,7 @@ export function show(){
         addToCartButton[i].classList.add(`button-${i}`);
 
         addToCartButton[i].addEventListener("click", () => {
-          alert(`${id}, ${name} agregado`);
+          carrito(id, name);
           });
         const stockElement = document.createElement('p');
         if(stock>0){
