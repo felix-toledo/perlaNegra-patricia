@@ -236,6 +236,23 @@ h1{
     height: auto;
 }
 
+.boton-carrito{
+    background-color: #03191E;
+  border: 2px solid #03191E;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+} .boton-carrito:hover{
+    background-color: white;
+} .boton-carrito span{
+    color: white;
+} .boton-carrito:hover > span{
+    color: #03191E;
+}
+
 .login {
     position: fixed;
     top: 0;

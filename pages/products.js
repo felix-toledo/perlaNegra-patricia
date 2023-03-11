@@ -4,12 +4,12 @@ const botonAnillos = document.getElementById("anillos");
 const botonCollares = document.getElementById("collares");
 const botonPulseras = document.getElementById("pulseras");
 const botonProductos = document.getElementById("productos");
+import {button} from "../components/button.js";
 export const productContainer = document.querySelector('.product-container');
 productsListen();
 
 export function show(){
     productContainer.innerHTML = "";
-    const cantidad = product.length;
     for (let i = 0; i < product.length; i++) {
       const id = product[i].id;
       const name = product[i].producto;
@@ -17,14 +17,13 @@ export function show(){
       const stock = product[i].cantidad;
       const price = product[i].precio;
       const imageUrl = product[i].imagen;
-  
       // Create HTML elements for the product
       const productDiv = document.createElement('div');
       productDiv.classList.add('product');
       const image = document.createElement('img');
       image.src = imageUrl;
       productDiv.appendChild(image);
-  
+
       const nameElement = document.createElement('h2');
       nameElement.textContent = name;
       productDiv.appendChild(nameElement);
@@ -32,7 +31,16 @@ export function show(){
       const descriptionElement = document.createElement('p');
       descriptionElement.textContent = description;
       productDiv.appendChild(descriptionElement);
-  
+
+      //Create the button for add to the cart
+      let addToCartButton = [];
+      addToCartButton[i] = button(productDiv, `Agregar item!`, "boton-carrito");
+      addToCartButton[i].classList.add(`button-${i}`);
+
+      addToCartButton[i].addEventListener("click", () => {
+        alert(`${id}, ${name} agregado`);
+        });
+
       const stockElement = document.createElement('p');
       if(stock>0){
         stockElement.textContent = `Cantidad: ${stock}`;
@@ -87,6 +95,13 @@ export function show(){
         descriptionElement.textContent = description;
         productDiv.appendChild(descriptionElement);
     
+        let addToCartButton = [];
+        addToCartButton[i] = button(productDiv, `Agregar item!`, "boton-carrito");
+        addToCartButton[i].classList.add(`button-${i}`);
+
+        addToCartButton[i].addEventListener("click", () => {
+          alert(`${id}, ${name} agregado`);
+          });
         const stockElement = document.createElement('p');
         if(stock>0){
           stockElement.textContent = `Cantidad: ${stock}`;

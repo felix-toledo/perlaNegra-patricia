@@ -65,7 +65,7 @@ function userInfo(){
         changeClass(userDataContainer,"user-container-hidden", "user-container");
         userDataContainer.classList.add("user-container-nbg");
         userDataContainer.innerHTML = '';
-        let boton = button(userDataContainer, "registrarse!");
+        let boton = button(userDataContainer, "registrarse!", "cta");
         boton.addEventListener("click", () => {
             login();
             productContainer.innerHTML= '';

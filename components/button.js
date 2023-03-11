@@ -1,7 +1,7 @@
-export function button(container, text){
+export function button(container, text, buttonClass){
 // create button
 let button = document.createElement("button");
-button.classList.add("cta");
+button.classList.add(buttonClass);
 
 // create span
 let span = document.createElement("span");
